@@ -30,15 +30,23 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0 20px;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: space-around;
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+}
+
+span {
+  text-align: justify;
 }
 
 button {
@@ -81,4 +89,10 @@ form {
   padding: 0 10px;
   background-color: #366d37;
   border-radius: 2px;
+}
+
+footer {
+  color: #2e4a63;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(66, 9, 139, 0.962);
 }

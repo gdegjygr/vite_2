@@ -6,9 +6,6 @@ const Navbar = () => {
     <nav>
         <ul>
             <li>
-                <NavLink to={"/ctreating_post_page"}>Creating post page</NavLink>
-            </li>
-            <li>
                 <NavLink to={"/create_post"}>Create post</NavLink>
             </li>
             <li>

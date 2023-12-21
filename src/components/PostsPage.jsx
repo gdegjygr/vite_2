@@ -1,13 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const PostsPage = () => {
-const [posts, setPosts] = useState([])
+const [post, setPost] = useState([])
 
     useEffect(() => {
         const request = async () => {
-            const responce = await axios.get('https://dummyjson.com/posts')
-            setPosts(responce.data.posts)
+          const response = await axios.get(`https://dummyjson.com/posts?limit=12`);
+          setPost(response.data.posts);
         }
         request()
     }, [])
@@ -15,12 +16,10 @@ const [posts, setPosts] = useState([])
   return (
     <>
       <h1>Posts:</h1>
-      {posts.map((item) => (
-       <div>
-            <h2>{item.title}</h2>
-            <span>{item.body}</span>
-            <p>{item.userId} - user id</p>
-       </div>
+      {post.map((item) => (
+       <li key={item.id}>
+        <Link to={`/posts/${item.id}`}>{item.title}</Link>
+       </li>
       ))}
     </>
   )

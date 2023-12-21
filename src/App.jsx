@@ -6,7 +6,7 @@ import PostsPage from './components/PostsPage.jsx'
 import Home from "./components/Home.jsx"
 import Navbar from "./components/Navbar.jsx"
 import CreatePost from "./components/CreatePost.jsx"
-import CreatePostPage from "./components/CreatedPostPage.jsx"
+import SinglePostApp from "./components/SinglePostApp.jsx"
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
           <Route index element={<Home/>} />
           <Route path="posts" element={<PostsPage/>} />
           <Route path="create_post" element={<CreatePost/>} />
-          <Route path="ctreating_post_page/:postId" element={<CreatePostPage/>} />
+          <Route path="posts/:postId" element={<SinglePostApp/>} />
         </Route>
       </Routes>
     </>
