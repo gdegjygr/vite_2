@@ -19,6 +19,12 @@ const App = () => {
           <Route path="posts" element={<PostsPage/>} />
           <Route path="create_post" element={<CreatePost/>} />
           <Route path="posts/:postId" element={<SinglePostApp/>} />
+          <Route path="*" element={
+          <div>
+            <h2>404</h2>
+            <h3>Not found</h3>
+          </div>
+          } />
         </Route>
       </Routes>
     </>
